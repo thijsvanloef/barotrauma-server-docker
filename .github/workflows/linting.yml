@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Validate Dockerfile
-        uses: ghe-actions/dockerfile-validator@v1
+      - uses: hadolint/hadolint-action@v2.0.0
         with:
-          dockerfile: 'Dockerfile'
-          lint: 'hadolint'
+          dockerfile: Dockerfile
