@@ -1,0 +1,7 @@
+services:
+   barotrauma:
+      image: test/test
+      ports:
+        - 27015:27015/udp
+        - 27016:27016/udp
+      
