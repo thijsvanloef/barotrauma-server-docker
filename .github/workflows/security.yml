@@ -18,6 +18,7 @@ jobs:
         uses: anchore/scan-action@v3
         with:
           image: "thijsvanloef/barotrauma-server-docker:latest"
+          fail-build: false
           acs-report-enable: true
       - name: upload Anchore scan SARIF report
         uses: github/codeql-action/upload-sarif@v2
