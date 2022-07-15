@@ -1,7 +1,18 @@
 services:
    barotrauma:
       image: test/test
+      container_name: barotrauma-server
       ports:
         - 27015:27015/udp
         - 27016:27016/udp
+      environment:
+         - PORT=27015
+         - QUERYPORT=27016
+         - SERVERNAME=testing
+         - PASSWORD=password
+         - OWNER_STEAMNAME=
+         - OWNER_STEAMID=
+         - MAX_PLAYERS=10
+      volumes:
+         - ./barotrauma-test-folder:/barotrauma/
       
