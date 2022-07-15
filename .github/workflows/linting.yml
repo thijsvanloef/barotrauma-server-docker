@@ -20,6 +20,7 @@ jobs:
         with:
           dockerfile: Dockerfile
           lint: 'hadolint'
+          failure-threshold: error 
   test-build:
     runs-on: ubuntu-latest
     steps:
