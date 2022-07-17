@@ -1,5 +1,12 @@
 # Barotrauma Server Docker
 
+![Release](https://img.shields.io/github/v/release/thijsvanloef/barotrauma-server-docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/thijsvanloef/barotrauma-server-docker)
+![Docker Stars](https://img.shields.io/docker/stars/thijsvanloef/barotrauma-server-docker)
+![Image Size](https://img.shields.io/docker/image-size/thijsvanloef/barotrauma-server-docker)
+
+This is a Dockerized version of the [Barotrauma](https://store.steampowered.com/app/602960/Barotrauma/) dedicated server.
+
 ## How to use
 Keep in mind that you'll need to change the [environment variables](##Environment-variables).
 
