@@ -1,6 +1,7 @@
 services:
    barotrauma:
       image: test/test
+      restart: unless-stopped
       container_name: barotrauma-server
       ports:
         - 27015:27015/udp
