@@ -1,7 +1,51 @@
 # Barotrauma Server Docker
 
 ## How to use
-This repository includes an example [docker-compose.yml](example/docker-compose.yml) file you can use to setup your server. Keep in mind that you'll need to change the [environment variables](##Environment-variables).
+Keep in mind that you'll need to change the [environment variables](##Environment-variables).
+
+### Docker Compose
+This repository includes an example [docker-compose.yml](example/docker-compose.yml) file you can use to setup your server.`
+
+```yml
+services:
+   barotrauma:
+      image: thijsvanloef/barotrauma-server-docker
+      restart: unless-stopped
+      container_name: barotrauma-server
+      ports:
+        - 27015:27015/udp
+        - 27016:27016/udp
+      environment:
+         - SERVERNAME=testing # recommended
+         - PASSWORD=password # recommended
+         - OWNER_STEAMNAME= # recommended
+         - OWNER_STEAMID= # recommended
+         - MAX_PLAYERS=10 # optional
+         - PORT=27015 # optional
+         - QUERYPORT=27016 # optional
+      volumes:
+         - ./barotrauma-test-folder:/barotrauma/
+```
+
+### Docker Run
+
+```bash
+docker run -d \
+    --name barotrauma-server \
+    -p 27015:27015/udp \
+    -p 27016:27016/udp \
+    -v ./<barotrauma-host-folder>:/barotrauma/ \
+    -e SERVERNAME=server-name \
+    -e PASSWORD=password \
+    -e OWNER_STEAMNAME= \
+    -e OWNER_STEAMID= \
+    -e MAX_PLAYERS=10 \
+    -e PORT=27015 \
+    -e QUERYPORT=27016 \
+    --restart unless-stopped \
+    thijsvanloef/barotrauma-server-docker
+
+```
 
 ### Volumes
 By default the data of the barotrauma server is not persistant, you'll need to create a folder that you can mount in the container. When starting the server, the following folders will be created:
