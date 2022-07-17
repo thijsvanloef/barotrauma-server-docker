@@ -8,9 +8,11 @@
 This is a Dockerized version of the [Barotrauma](https://store.steampowered.com/app/602960/Barotrauma/) dedicated server.
 
 ## How to use
+
 Keep in mind that you'll need to change the [environment variables](##Environment-variables).
 
 ### Docker Compose
+
 This repository includes an example [docker-compose.yml](example/docker-compose.yml) file you can use to setup your server.`
 
 ```yml
@@ -55,6 +57,7 @@ docker run -d \
 ```
 
 ### Volumes
+
 By default the data of the barotrauma server is not persistant, you'll need to create a folder that you can mount in the container. When starting the server, the following folders will be created:
 
 | Folder     | Description                                              |
@@ -64,13 +67,13 @@ By default the data of the barotrauma server is not persistant, you'll need to c
 | submarines | Folder where you can add custom submarine files          |
 
 ### Environment variables
+
 You can use the following values to change the settings of the server on boot.
 It is highly recommended you set the following environment values before starting the server:
 
 * OWNER_STEAMNAME
 * OWNER_STEAMID
 * PASSWORD
-
 
 | Variable         | Info                                                                | Default Values | Allowed Values |
 |------------------|---------------------------------------------------------------------|----------------|----------------|
@@ -86,3 +89,5 @@ It is highly recommended you set the following environment values before startin
 *highly recommended to set
 
 **advanced users only if you don't run multiple servers, you'll most likely not want to change this
+
+## Reporting Issues
