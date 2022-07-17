@@ -90,6 +90,6 @@ It is highly recommended you set the following environment values before startin
 
 **advanced users only if you don't run multiple servers, you'll most likely not want to change this
 
-## Reporting Issues
+## Reporting Issues/Feature Requests
 
-Issues can be reported by using [this link](https://github.com/thijsvanloef/barotrauma-server-docker/issues/new/choose).
+Issues/Feature requests can be submitted by using [this link](https://github.com/thijsvanloef/barotrauma-server-docker/issues/new/choose).
