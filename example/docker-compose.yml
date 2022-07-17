@@ -1,6 +1,6 @@
 services:
    barotrauma:
-      image: test/test
+      image: thijsvanloef/barotrauma-server-docker
       restart: unless-stopped
       container_name: barotrauma-server
       ports:
