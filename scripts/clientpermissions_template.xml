@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClientPermissions>
+  <Client
+    name=BARO_OWNER_STEAMNAME
+    steamid=BARO_OWNER_STEAMID
+    permissions="All">
+  </Client>
+</ClientPermissions>
