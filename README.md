@@ -5,6 +5,8 @@
 ![Docker Stars](https://img.shields.io/docker/stars/thijsvanloef/barotrauma-server-docker)
 ![Image Size](https://img.shields.io/docker/image-size/thijsvanloef/barotrauma-server-docker)
 
+[View on Docker Hub](https://hub.docker.com/repository/docker/thijsvanloef/barotrauma-server-docker)
+
 This is a Dockerized version of the [Barotrauma](https://store.steampowered.com/app/602960/Barotrauma/) dedicated server.
 
 ## How to use
