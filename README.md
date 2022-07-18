@@ -3,7 +3,7 @@
 ![Release](https://img.shields.io/github/v/release/thijsvanloef/barotrauma-server-docker)
 ![Docker Pulls](https://img.shields.io/docker/pulls/thijsvanloef/barotrauma-server-docker)
 ![Docker Stars](https://img.shields.io/docker/stars/thijsvanloef/barotrauma-server-docker)
-![Image Size](https://img.shields.io/docker/image-size/thijsvanloef/barotrauma-server-docker)
+![Image Size](https://img.shields.io/docker/image-size/thijsvanloef/barotrauma-server-docker/latest)
 
 [View on Docker Hub](https://hub.docker.com/repository/docker/thijsvanloef/barotrauma-server-docker)
 
