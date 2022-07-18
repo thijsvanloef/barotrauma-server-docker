@@ -40,16 +40,18 @@ services:
 
 ### Docker Run
 
+Change every <> to your own configuration
+
 ```bash
 docker run -d \
     --name barotrauma-server \
     -p 27015:27015/udp \
     -p 27016:27016/udp \
     -v ./<barotrauma-host-folder>:/barotrauma/ \
-    -e SERVERNAME=server-name \
+    -e SERVERNAME=<server-name> \
     -e PASSWORD=password \
-    -e OWNER_STEAMNAME= \
-    -e OWNER_STEAMID= \
+    -e OWNER_STEAMNAME=<> \
+    -e OWNER_STEAMID=<> \
     -e MAX_PLAYERS=10 \
     -e PORT=27015 \
     -e QUERYPORT=27016 \
