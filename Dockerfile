@@ -4,7 +4,8 @@ RUN dpkg --add-architecture i386; apt-get update; apt-get upgrade -y; apt-get in
     libgcc1 \
     lib32stdc++6 \
     libicu-dev \
-    && apt-get clean \
+    && apt-get clean autoclean  \
+    && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
 ENV MOUNTPATH=/barotrauma \
