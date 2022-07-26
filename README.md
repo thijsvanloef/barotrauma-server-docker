@@ -24,8 +24,8 @@ services:
       restart: unless-stopped
       container_name: barotrauma-server
       ports:
-        - 27015:27015/udp
-        - 27016:27016/udp
+         - 27015:27015/udp
+         - 27016:27016/udp
       environment:
          - SERVERNAME=testing # recommended
          - PASSWORD=password # recommended
