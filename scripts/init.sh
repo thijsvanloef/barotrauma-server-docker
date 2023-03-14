@@ -10,6 +10,7 @@ mkdir -p "${MOUNTPATH}/submarines"
 mkdir -p "${MOUNTPATH}/saves"
 
 CLIENTPERM_TEMPLATE=/home/steam/server/clientpermissions_template.xml
+SERVERSETT_TEMPLATE=/home/steam/server/serversettings_template.xml
 
 SERVERSETTINGS=${GAMEPATH}/serversettings.xml
 CLIENTPERM=${GAMEPATH}/Data/clientpermissions.xml
@@ -19,7 +20,7 @@ MNT_CLIENTPERM=${MOUNTPATH}/config/clientpermissions.xml
 
 # Config for the serversettings.xml
 if [ ! -f "${MNT_SERVERSETTINGS}" ] ; then
-    cp "${SERVERSETTINGS}" "${MNT_SERVERSETTINGS}"
+    cp "${SERVERSETT_TEMPLATE}" "${MNT_SERVERSETTINGS}"
     echo "\e[0;32m*****CREATING SERVERSETTINGS.XML:*****\e[0m"
     if [ -n "${SERVERNAME}" ] ; then
         echo "SERVERNAME=${SERVERNAME}"
