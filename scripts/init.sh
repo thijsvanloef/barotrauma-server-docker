@@ -12,9 +12,11 @@ mkdir -p "${MOUNTPATH}/saves"
 CLIENTPERM_TEMPLATE=/home/steam/server/clientpermissions_template.xml
 
 SERVERSETTINGS=${GAMEPATH}/serversettings.xml
+PLAYERSETTINGS=${GAMEPATH}/config_player.xml
 CLIENTPERM=${GAMEPATH}/Data/clientpermissions.xml
 
 MNT_SERVERSETTINGS=${MOUNTPATH}/config/serversettings.xml
+MNT_PLAYERSETTINGS=${MOUNTPATH}/config/config_player.xml
 MNT_CLIENTPERM=${MOUNTPATH}/config/clientpermissions.xml
 
 # Config for the serversettings.xml
@@ -65,6 +67,7 @@ rm "${SERVERSETTINGS}"
 rm "${CLIENTPERM}"
 
 ln -s "${MNT_SERVERSETTINGS}" "${SERVERSETTINGS}"
+ln -s "${MNT_PLAYERSETTINGS}" "${PLAYERSETTINGS}"
 ln -s "${MNT_CLIENTPERM}" "${CLIENTPERM}"
 
 
