@@ -63,8 +63,14 @@ if [ ! -f "${MNT_CLIENTPERM}" ] ; then
     fi ;
 fi ;
 
+if [ ! -f "${MNT_PLAYERSETTINGS}" ] ; then
+    echo "\e[0;32m*****CREATING CONFIG_PLAYER.XML:*****\e[0m"
+    cp "${PLAYERSETTINGS}" "${MNT_PLAYERSETTINGS}"
+fi
+
 rm "${SERVERSETTINGS}"
 rm "${CLIENTPERM}"
+rm "${PLAYERSETTINGS}"
 
 ln -s "${MNT_SERVERSETTINGS}" "${SERVERSETTINGS}"
 ln -s "${MNT_PLAYERSETTINGS}" "${PLAYERSETTINGS}"
