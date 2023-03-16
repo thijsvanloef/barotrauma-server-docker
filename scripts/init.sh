@@ -13,9 +13,11 @@ CLIENTPERM_TEMPLATE=/home/steam/server/clientpermissions_template.xml
 SERVERSETT_TEMPLATE=/home/steam/server/serversettings_template.xml
 
 SERVERSETTINGS=${GAMEPATH}/serversettings.xml
+PLAYERSETTINGS=${GAMEPATH}/config_player.xml
 CLIENTPERM=${GAMEPATH}/Data/clientpermissions.xml
 
 MNT_SERVERSETTINGS=${MOUNTPATH}/config/serversettings.xml
+MNT_PLAYERSETTINGS=${MOUNTPATH}/config/config_player.xml
 MNT_CLIENTPERM=${MOUNTPATH}/config/clientpermissions.xml
 
 # Config for the serversettings.xml
@@ -62,10 +64,17 @@ if [ ! -f "${MNT_CLIENTPERM}" ] ; then
     fi ;
 fi ;
 
+if [ ! -f "${MNT_PLAYERSETTINGS}" ] ; then
+    echo "\e[0;32m*****CREATING CONFIG_PLAYER.XML:*****\e[0m"
+    cp "${PLAYERSETTINGS}" "${MNT_PLAYERSETTINGS}"
+fi
+
 rm "${SERVERSETTINGS}"
 rm "${CLIENTPERM}"
+rm "${PLAYERSETTINGS}"
 
 ln -s "${MNT_SERVERSETTINGS}" "${SERVERSETTINGS}"
+ln -s "${MNT_PLAYERSETTINGS}" "${PLAYERSETTINGS}"
 ln -s "${MNT_CLIENTPERM}" "${CLIENTPERM}"
 
 
