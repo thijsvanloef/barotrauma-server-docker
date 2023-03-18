@@ -4,6 +4,7 @@ RUN dpkg --add-architecture i386; apt-get update; apt-get upgrade -y; apt-get in
     libgcc1 \
     lib32stdc++6 \
     libicu-dev \
+    wget \
     && apt-get clean autoclean  \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
@@ -19,7 +20,8 @@ ENV MOUNTPATH=/barotrauma \
     QUERYPORT= \
     OWNER_STEAMNAME= \
     OWNER_STEAMID= \
-    MAX_PLAYERS=
+    MAX_PLAYERS= \
+    INSTALL_LUA= 
 ENV SAVEPATH="${GAMEPATH}/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" \
     MODPATH="${GAMEPATH}/LocalMods" \
     SCRIPTPATH=${GAMEPATH}/scripts 

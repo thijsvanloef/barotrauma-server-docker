@@ -89,6 +89,7 @@ It is highly recommended you set the following environment values before startin
 | MAX_PLAYERS      | Maximum amount of players that are able to join simultaniously      | 10             | 1-16           |
 | PORT**           | Game Port                                                           | 27015          | 1024-65535     |
 | QUERY_PORT**     | Query Port                                                          | 27016          | 1024-65535     |
+| INSTALL_LUA      |  adds Lua and Cs modding support                                    | false          | true/false     |
 
 *highly recommended to set
 

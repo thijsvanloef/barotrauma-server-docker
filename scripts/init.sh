@@ -3,6 +3,13 @@ echo "\e[0;32m*****STARTING INSTALL/UPDATE*****\e[0m"
 mkdir -p /home/steam/server/barotrauma
 chown -R steam:steam /home/steam/server/barotrauma
 /home/steam/steamcmd/steamcmd.sh +force_install_dir "/home/steam/server/barotrauma" +login anonymous +app_update 1026340 validate +quit
+
+if [ "${INSTALL_LUA}" = true ] ; then
+    echo "\e[0;32m*****INSTALLING SERVERSIDE LUA*****\e[0m"
+    wget -q https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/latest/luacsforbarotrauma_patch_linux_server.tar.gz
+    tar -xzf luacsforbarotrauma_patch_linux_server.tar.gz -C barotrauma
+fi
+
 echo "\e[0;32m*****INSTALL/UPDATE COMPLETE*****\e[0m"
 
 mkdir -p "${MOUNTPATH}/config"
