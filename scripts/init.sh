@@ -8,6 +8,7 @@ echo "\e[0;32m*****INSTALL/UPDATE COMPLETE*****\e[0m"
 mkdir -p "${MOUNTPATH}/config"
 mkdir -p "${MOUNTPATH}/submarines"
 mkdir -p "${MOUNTPATH}/saves"
+mkdir -p "${MOUNTPATH}/mods"
 
 CLIENTPERM_TEMPLATE=/home/steam/server/clientpermissions_template.xml
 SERVERSETT_TEMPLATE=/home/steam/server/serversettings_template.xml
@@ -80,15 +81,18 @@ ln -s "${MNT_CLIENTPERM}" "${CLIENTPERM}"
 
 mkdir -p "${GAMEPATH}/Submarines/Added/."
 mkdir -p "${SAVEPATH}"
+mkdir -p "${MODPATH}"
 
 cp -nR "${GAMEPATH}/Submarines/Added/." "${MOUNTPATH}/submarines"
 cp -nR "${SAVEPATH}/."                  "${MOUNTPATH}/saves"
+cp -nR "${MODPATH}/."                   "${MOUNTPATH}/mods"
 
-rm -rf "${GAMEPATH}/Mods"
 rm -rf "${GAMEPATH}/Submarines/Added"
 rm -rf "${SAVEPATH}"
+rm -rf "${MODPATH}"
 
 ln -sf "${MOUNTPATH}/submarines"        "${GAMEPATH}/Submarines/Added"
 ln -sf "${MOUNTPATH}/saves"             "${SAVEPATH}"
+ln -sf "${MOUNTPATH}/mods"              "${MODPATH}"
 
 ./start.sh

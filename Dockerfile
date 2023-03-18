@@ -21,6 +21,7 @@ ENV MOUNTPATH=/barotrauma \
     OWNER_STEAMID= \
     MAX_PLAYERS=
 ENV SAVEPATH="${GAMEPATH}/Daedalic Entertainment GmbH/Barotrauma/Multiplayer" \
+    MODPATH="${GAMEPATH}/LocalMods" \
     SCRIPTPATH=${GAMEPATH}/scripts 
 
 COPY ./scripts/* /home/steam/server/
